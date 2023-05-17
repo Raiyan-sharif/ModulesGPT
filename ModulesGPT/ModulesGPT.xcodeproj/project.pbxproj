@@ -8,17 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		89C06FAB2A138D7C0077B389 /* ModulesGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C06FAA2A138D7C0077B389 /* ModulesGPTApp.swift */; };
-		89C06FAD2A138D7C0077B389 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C06FAC2A138D7C0077B389 /* ContentView.swift */; };
 		89C06FAF2A138D7D0077B389 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89C06FAE2A138D7D0077B389 /* Assets.xcassets */; };
 		89C06FB22A138D7D0077B389 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89C06FB12A138D7D0077B389 /* Preview Assets.xcassets */; };
+		89C06FB92A1390540077B389 /* ModulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C06FB82A1390540077B389 /* ModulesView.swift */; };
+		89C06FBB2A1390800077B389 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C06FBA2A1390800077B389 /* SettingsView.swift */; };
+		89C06FBE2A1392170077B389 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 89C06FBD2A1392170077B389 /* OpenAISwift */; };
+		89C06FC02A139A6A0077B389 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C06FBF2A139A6A0077B389 /* AppModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		89C06FA72A138D7C0077B389 /* ModulesGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModulesGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C06FAA2A138D7C0077B389 /* ModulesGPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesGPTApp.swift; sourceTree = "<group>"; };
-		89C06FAC2A138D7C0077B389 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		89C06FAE2A138D7D0077B389 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89C06FB12A138D7D0077B389 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		89C06FB82A1390540077B389 /* ModulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesView.swift; sourceTree = "<group>"; };
+		89C06FBA2A1390800077B389 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		89C06FBF2A139A6A0077B389 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C06FBE2A1392170077B389 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,9 +58,11 @@
 			isa = PBXGroup;
 			children = (
 				89C06FAA2A138D7C0077B389 /* ModulesGPTApp.swift */,
-				89C06FAC2A138D7C0077B389 /* ContentView.swift */,
+				89C06FB82A1390540077B389 /* ModulesView.swift */,
+				89C06FBA2A1390800077B389 /* SettingsView.swift */,
 				89C06FAE2A138D7D0077B389 /* Assets.xcassets */,
 				89C06FB02A138D7D0077B389 /* Preview Content */,
+				89C06FBF2A139A6A0077B389 /* AppModel.swift */,
 			);
 			path = ModulesGPT;
 			sourceTree = "<group>";
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = ModulesGPT;
+			packageProductDependencies = (
+				89C06FBD2A1392170077B389 /* OpenAISwift */,
+			);
 			productName = ModulesGPT;
 			productReference = 89C06FA72A138D7C0077B389 /* ModulesGPT.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 89C06F9E2A138D7C0077B389;
+			packageReferences = (
+				89C06FBC2A1392170077B389 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 89C06FA82A138D7C0077B389 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89C06FAD2A138D7C0077B389 /* ContentView.swift in Sources */,
+				89C06FBB2A1390800077B389 /* SettingsView.swift in Sources */,
+				89C06FB92A1390540077B389 /* ModulesView.swift in Sources */,
 				89C06FAB2A138D7C0077B389 /* ModulesGPTApp.swift in Sources */,
+				89C06FC02A139A6A0077B389 /* AppModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +291,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +321,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +357,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		89C06FBC2A1392170077B389 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		89C06FBD2A1392170077B389 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89C06FBC2A1392170077B389 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 89C06F9F2A138D7C0077B389 /* Project object */;
 }
