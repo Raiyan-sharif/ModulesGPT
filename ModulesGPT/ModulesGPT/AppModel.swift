@@ -11,11 +11,17 @@ import OpenAISwift
 final class AppModel: ObservableObject{
 
     @Published var isThinking: Bool = false
-
+    @Published var selectedModule: Modules?
+    @Published var newChatEntryText: String = ""
+    @Published var generatedNewChat: String = ""
+    var isEmptyNewChatScreen: Bool{ !isThinking && generatedNewChat.isEmpty}
+    var hasResultNewChatScreen: Bool{
+        !isThinking && !generatedNewChat.isEmpty
+    }
     private var client: OpenAISwift?
 
     func setup(){
-        client = OpenAISwift(authToken: "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")
+        client = OpenAISwift(authToken: "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")
     }
 
     func send(text: String, completion: @escaping (String) -> Void){
@@ -31,6 +37,18 @@ final class AppModel: ObservableObject{
 
             }
         })
+    }
+
+    func makeNewChat(){
+        send(text: "\(newChatEntryText)") { output in
+            DispatchQueue.main.async { [weak self] in
+                guard let `self` = self else{
+                    return
+                }
+                self.generatedNewChat = output.trimmingCharacters(in: .whitespacesAndNewlines)
+                self.isThinking = false
+            }
+        }
     }
 }
 
